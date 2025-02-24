@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YouTube Video Editor Portfolio</title>
+<script src="https://cdn.tailwindcss.com">
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "rgb(209,221,93)",
+        secondary: "rgb(255,122,69)",
+      },
+      borderRadius: {
+        none: "0px",
+        sm: "4px",
+        DEFAULT: "8px",
+        md: "12px",
+        lg: "16px",
+        xl: "20px",
+        "2xl": "24px",
+        "3xl": "32px",
+        full: "9999px",
+        button: "8px",
+      },
+    },
+  },
+};
+</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.project-card.active { display: block; }
+.project-card { display: none; }
+</style>
+</head>
+<body class="bg-gray-900 min-h-screen">
+<div class="max-w-7xl mx-auto px-4 py-8">
+<nav class="flex mb-8" aria-label="Breadcrumb">
+<ol class="inline-flex items-center space-x-1 md:space-x-3">
+<li class="inline-flex items-center">
+<a href="#" class="text-gray-300 hover:text-primary">
+<i class="ri-home-line w-4 h-4 flex items-center justify-center"></i>
+<span class="ml-1">Home</span>
+</a>
+</li>
+<li>
+<div class="flex items-center">
+<i class="ri-arrow-right-s-line w-4 h-4 flex items-center justify-center text-gray-400"></i>
+<a href="#" class="ml-1 text-gray-700 hover:text-primary md:ml-2">Portfolio</a>
+</div>
+</li>
+<li aria-current="page">
+<div class="flex items-center">
+<i class="ri-arrow-right-s-line w-4 h-4 flex items-center justify-center text-gray-400"></i>
+<span class="ml-1 text-primary md:ml-2">Web Design</span>
+</div>
+</li>
+</ol>
+</nav>
+<div class="flex items-center justify-between mb-8">
+<div class="flex space-x-4">
+<button class="filter-btn !rounded-button bg-primary text-white px-4 py-2 active hover:opacity-80 transition-opacity duration-300" data-category="all">All Projects</button>
+<button class="filter-btn !rounded-button bg-gray-800 text-gray-300 px-4 py-2 hover:bg-primary hover:text-white transition-colors duration-300" data-category="youtube">YouTube Videos</button>
+<button class="filter-btn !rounded-button bg-gray-800 text-gray-300 px-4 py-2 hover:bg-primary hover:text-white transition-colors duration-300" data-category="reels">Instagram Reels</button>
+<button class="filter-btn !rounded-button bg-gray-800 text-gray-300 px-4 py-2 hover:bg-primary hover:text-white transition-colors duration-300" data-category="shorts">YouTube Shorts</button>
+</div>
+<div class="flex items-center space-x-4">
+<button class="sort-btn !rounded-button bg-gray-800 text-gray-300 px-4 py-2 hover:bg-primary hover:text-white transition-colors duration-300" data-sort="date">
+<i class="ri-calendar-line w-4 h-4 flex items-center justify-center mr-2"></i>Sort by Date
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-8" id="projectContainer">
+<div class="project-card active bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300" data-category="youtube" data-date="2025-02">
+<div class="relative">
+<img src="https://public.readdy.ai/ai/img_res/80c2cddda5d909b59f0371b336163cba.jpg" alt="Project 1" class="w-full h-[400px] object-cover">
+<div class="absolute top-4 right-4 flex space-x-2">
+<button class="video-prev !rounded-full bg-gray-900/40 p-2 hover:bg-gray-900/60 transition-all duration-300 backdrop-blur-sm">
+<i class="ri-skip-back-line w-6 h-6 flex items-center justify-center text-white"></i>
+</button>
+<button class="video-play !rounded-full bg-gray-900/40 p-2 hover:bg-gray-900/60 transition-all duration-300 backdrop-blur-sm">
+<i class="ri-play-line w-6 h-6 flex items-center justify-center text-white"></i>
+</button>
+<button class="video-next !rounded-full bg-gray-900/40 p-2 hover:bg-gray-900/60 transition-all duration-300 backdrop-blur-sm">
+<i class="ri-skip-forward-line w-6 h-6 flex items-center justify-center text-white"></i>
+</button>
+</div>
+</div>
+<div class="p-8">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-2xl font-bold text-white">Tech Review Series - Tech Boy Deepak</h2>
+<span class="px-3 py-1 text-sm text-primary bg-primary/10 rounded-full">YouTube Videos</span>
+</div>
+<div class="flex items-center space-x-4 mb-6">
+<div class="flex items-center">
+<i class="ri-calendar-line w-4 h-4 flex items-center justify-center text-gray-400 mr-2"></i>
+<span class="text-gray-400">February 2025</span>
+</div>
+<div class="flex items-center">
+<i class="ri-time-line w-4 h-4 flex items-center justify-center text-gray-400 mr-2"></i>
+<span class="text-gray-400">15 videos</span>
+</div>
+<div class="flex items-center">
+<i class="ri-youtube-line w-4 h-4 flex items-center justify-center text-gray-400 mr-2"></i>
+<span class="text-gray-400">2.5M+ views</span>
+</div>
+</div>
+<p class="text-gray-400 mb-6">Created and edited a series of high-quality tech review videos for Tech Boy Deepak's YouTube channel. The project involved advanced video editing, motion graphics, and engaging transitions using After Effects and Premiere Pro.</p>
+<div class="flex items-center justify-between">
+<div class="flex space-x-4">
+<button class="!rounded-button bg-primary text-white px-6 py-2 flex items-center">
+<i class="ri-eye-line w-4 h-4 flex items-center justify-center mr-2"></i>
+View Live
+</button>
+<button class="!rounded-button bg-gray-700 text-gray-300 px-6 py-2 flex items-center">
+<i class="ri-share-line w-4 h-4 flex items-center justify-center mr-2"></i>
+Share
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="project-card bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300" data-category="youtube" data-date="2025-01">
+<div class="relative">
+<img src="https://public.readdy.ai/ai/img_res/d786e7765cc72929d9187086fd011787.jpg" alt="Project 2" class="w-full h-[400px] object-cover">
+<div class="absolute top-4 right-4 flex space-x-2">
+<button class="video-prev !rounded-full bg-gray-900/40 p-2 hover:bg-gray-900/60 transition-all duration-300 backdrop-blur-sm">
+<i class="ri-skip-back-line w-6 h-6 flex items-center justify-center text-white"></i>
+</button>
+<button class="video-play !rounded-full bg-gray-900/40 p-2 hover:bg-gray-900/60 transition-all duration-300 backdrop-blur-sm">
+<i class="ri-play-line w-6 h-6 flex items-center justify-center text-white"></i>
+</button>
+<button class="video-next !rounded-full bg-gray-900/40 p-2 hover:bg-gray-900/60 transition-all duration-300 backdrop-blur-sm">
+<i class="ri-skip-forward-line w-6 h-6 flex items-center justify-center text-white"></i>
+</button>
+</div>
+</div>
+<div class="p-8">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-2xl font-bold text-white">Gaming Channel - ProGamer Alex</h2>
+<span class="px-3 py-1 text-sm text-primary bg-primary/10 rounded-full">YouTube Videos</span>
+</div>
+<div class="flex items-center space-x-4 mb-6">
+<div class="flex items-center">
+<i class="ri-calendar-line w-4 h-4 flex items-center justify-center text-gray-400 mr-2"></i>
+<span class="text-gray-400">January 2025</span>
+</div>
+<div class="flex items-center">
+<i class="ri-time-line w-4 h-4 flex items-center justify-center text-gray-400 mr-2"></i>
+<span class="text-gray-400">20 videos</span>
+</div>
+<div class="flex items-center">
+<i class="ri-youtube-line w-4 h-4 flex items-center justify-center text-gray-400 mr-2"></i>
+<span class="text-gray-400">3.8M+ views</span>
+</div>
+</div>
+<p class="text-gray-400 mb-6">Produced and edited gaming content for ProGamer Alex, featuring gameplay highlights, tutorials, and equipment reviews. Implemented dynamic transitions, custom overlays, and engaging visual effects.</p>
+<div class="flex items-center justify-between">
+<div class="flex space-x-4">
+<button class="!rounded-button bg-primary text-white px-6 py-2 flex items-center">
+<i class="ri-eye-line w-4 h-4 flex items-center justify-center mr-2"></i>
+View Live
+</button>
+<button class="!rounded-button bg-gray-700 text-gray-300 px-6 py-2 flex items-center">
+<i class="ri-share-line w-4 h-4 flex items-center justify-center mr-2"></i>
+Share
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="project-card bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300" data-category="youtube" data-date="2024-12">
+<div class="relative">
+<img src="https://public.readdy.ai/ai/img_res/95c4ad97de074eb43aecf361cf2f7cf1.jpg" alt="Project 3" class="w-full h-[400px] object-cover">
+<div class="absolute top-4 right-4 flex space-x-2">
+<button class="video-prev !rounded-full bg-gray-900/40 p-2 hover:bg-gray-900/60 transition-all duration-300 backdrop-blur-sm">
+<i class="ri-skip-back-line w-6 h-6 flex items-center justify-center text-white"></i>
+</button>
+<button class="video-play !rounded-full bg-gray-900/40 p-2 hover:bg-gray-900/60 transition-all duration-300 backdrop-blur-sm">
+<i class="ri-play-line w-6 h-6 flex items-center justify-center text-white"></i>
+</button>
+<button class="video-next !rounded-full bg-gray-900/40 p-2 hover:bg-gray-900/60 transition-all duration-300 backdrop-blur-sm">
+<i class="ri-skip-forward-line w-6 h-6 flex items-center justify-center text-white"></i>
+</button>
+</div>
+</div>
+<div class="p-8">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-2xl font-bold text-white">Culinary Adventures - Chef Maria</h2>
+<span class="px-3 py-1 text-sm text-primary bg-primary/10 rounded-full">YouTube Videos</span>
+</div>
+<div class="flex items-center space-x-4 mb-6">
+<div class="flex items-center">
+<i class="ri-calendar-line w-4 h-4 flex items-center justify-center text-gray-400 mr-2"></i>
+<span class="text-gray-400">December 2024</span>
+</div>
+<div class="flex items-center">
+<i class="ri-time-line w-4 h-4 flex items-center justify-center text-gray-400 mr-2"></i>
+<span class="text-gray-400">25 videos</span>
+</div>
+<div class="flex items-center">
+<i class="ri-youtube-line w-4 h-4 flex items-center justify-center text-gray-400 mr-2"></i>
+<span class="text-gray-400">4.2M+ views</span>
+</div>
+</div>
+<p class="text-gray-400 mb-6">Created mouthwatering cooking content for Chef Maria's channel. Specialized in cinematic food shots, recipe tutorials, and behind-the-scenes content. Featured smooth transitions and professional color grading.</p>
+<div class="flex items-center justify-between">
+<div class="flex space-x-4">
+<button class="!rounded-button bg-primary text-white px-6 py-2 flex items-center">
+<i class="ri-eye-line w-4 h-4 flex items-center justify-center mr-2"></i>
+View Live
+</button>
+<button class="!rounded-button bg-gray-700 text-gray-300 px-6 py-2 flex items-center">
+<i class="ri-share-line w-4 h-4 flex items-center justify-center mr-2"></i>
+Share
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=professional video editing workspace with multiple monitors showing video editing software, After Effects and Premiere Pro interfaces, high-end camera equipment, modern studio setup&width=800&height=400&orientation=landscape" alt="Project 1" class="w-full h-[400px] object-cover">
+<div class="absolute top-4 right-4 flex space-x-2">
+<button class="video-prev !rounded-full bg-gray-900/40 p-2 hover:bg-gray-900/60 transition-all duration-300 backdrop-blur-sm">
+<i class="ri-skip-back-line w-6 h-6 flex items-center justify-center text-white"></i>
+</button>
+<button class="video-play !rounded-full bg-gray-900/40 p-2 hover:bg-gray-900/60 transition-all duration-300 backdrop-blur-sm">
+<i class="ri-play-line w-6 h-6 flex items-center justify-center text-white"></i>
+</button>
+<button class="video-next !rounded-full bg-gray-900/40 p-2 hover:bg-gray-900/60 transition-all duration-300 backdrop-blur-sm">
+<i class="ri-skip-forward-line w-6 h-6 flex items-center justify-center text-white"></i>
+</button>
+</div>
+</div>
+<div class="p-8">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-2xl font-bold text-white">Tech Review Series - Tech Boy Deepak</h2>
+<span class="px-3 py-1 text-sm text-primary bg-primary/10 rounded-full">YouTube Videos</span>
+</div>
+<div class="flex items-center space-x-4 mb-6">
+<div class="flex items-center">
+<i class="ri-calendar-line w-4 h-4 flex items-center justify-center text-gray-400 mr-2"></i>
+<span class="text-gray-400">January 2025</span>
+</div>
+<div class="flex items-center">
+<i class="ri-time-line w-4 h-4 flex items-center justify-center text-gray-400 mr-2"></i>
+<span class="text-gray-600">15 videos</span>
+</div>
+<div class="flex items-center">
+<i class="ri-youtube-line w-4 h-4 flex items-center justify-center text-gray-400 mr-2"></i>
+<span class="text-gray-600">2.5M+ views</span>
+</div>
+</div>
+<p class="text-gray-400 mb-6">Created and edited a series of high-quality tech review videos for Tech Boy Deepak's YouTube channel. The project involved advanced video editing, motion graphics, and engaging transitions using After Effects and Premiere Pro.</p>
+<div class="mb-8">
+<h3 class="text-lg font-semibold text-white mb-4">Editing Highlights</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center">
+<i class="ri-check-line w-5 h-5 flex items-center justify-center text-primary mr-2"></i>
+<span class="text-gray-400">Dynamic Motion Graphics</span>
+</div>
+<div class="flex items-center">
+<i class="ri-check-line w-5 h-5 flex items-center justify-center text-primary mr-2"></i>
+<span class="text-gray-600">Cinematic B-Roll</span>
+</div>
+<div class="flex items-center">
+<i class="ri-check-line w-5 h-5 flex items-center justify-center text-primary mr-2"></i>
+<span class="text-gray-600">Custom Animations</span>
+</div>
+<div class="flex items-center">
+<i class="ri-check-line w-5 h-5 flex items-center justify-center text-primary mr-2"></i>
+<span class="text-gray-600">Professional Color Grading</span>
+</div>
+</div>
+</div>
+<div class="bg-gray-700 rounded-lg p-6 mb-8">
+<div class="flex items-start">
+<img src="https://public.readdy.ai/ai/img_res/89d15cc7e3d54c21a6b3a02304acfadb.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+<div>
+<p class="text-gray-400 italic mb-4">"The redesigned dashboard has significantly improved our team's productivity. The intuitive interface and powerful features have made data analysis a breeze."</p>
+<div>
+<h4 class="font-semibold text-white">Michael Richardson</h4>
+<p class="text-gray-600">CTO, TechCorp Solutions</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex space-x-4">
+<button class="!rounded-button bg-primary text-white px-6 py-2 flex items-center">
+<i class="ri-eye-line w-4 h-4 flex items-center justify-center mr-2"></i>
+View Live
+</button>
+<button class="!rounded-button bg-gray-700 border border-gray-600 text-gray-300 px-6 py-2 flex items-center">
+<i class="ri-share-line w-4 h-4 flex items-center justify-center mr-2"></i>
+Share
+</button>
+</div>
+<div class="flex items-center space-x-2">
+<button class="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-primary">
+<i class="ri-github-line w-5 h-5 flex items-center justify-center"></i>
+</button>
+<button class="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-primary">
+<i class="ri-dribbble-line w-5 h-5 flex items-center justify-center"></i>
+</button>
+<button class="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-primary">
+<i class="ri-behance-line w-5 h-5 flex items-center justify-center"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-8">
+<div class="relative flex justify-center items-center">
+<div class="relative w-[280px] h-[560px] bg-black rounded-[3rem] border-[14px] border-black overflow-hidden shadow-xl">
+<div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[120px] h-[24px] bg-black rounded-b-[1rem] flex items-center justify-center">
+<div class="w-[60px] h-[6px] bg-gray-800 rounded-full"></div>
+</div>
+<video class="w-full h-full object-cover" autoplay loop muted playsinline>
+<source src="https://assets.mixkit.co/videos/preview/mixkit-woman-walking-under-a-blue-sky-4011-large.mp4" type="video/mp4">
+</video>
+<div class="absolute bottom-4 right-4 flex flex-col space-y-4">
+<button class="w-12 h-12 bg-gray-900/40 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-gray-900/60 transition-all duration-300">
+<i class="ri-heart-line text-xl text-white"></i>
+</button>
+<button class="w-12 h-12 bg-gray-900/40 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-gray-900/60 transition-all duration-300">
+<i class="ri-chat-1-line text-xl text-white"></i>
+</button>
+<button class="w-12 h-12 bg-gray-900/40 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-gray-900/60 transition-all duration-300">
+<i class="ri-share-line text-xl text-white"></i>
+</button>
+</div>
+</div>
+</div>
+<div class="relative flex justify-center items-center">
+<div class="relative w-[280px] h-[560px] bg-black rounded-[3rem] border-[14px] border-black overflow-hidden shadow-xl">
+<div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[120px] h-[24px] bg-black rounded-b-[1rem] flex items-center justify-center">
+<div class="w-[60px] h-[6px] bg-gray-800 rounded-full"></div>
+</div>
+<video class="w-full h-full object-cover" autoplay loop muted playsinline>
+<source src="https://assets.mixkit.co/videos/preview/mixkit-influencer-making-content-4074-large.mp4" type="video/mp4">
+</video>
+<div class="absolute bottom-4 right-4 flex flex-col space-y-4">
+<button class="w-12 h-12 bg-gray-900/40 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-gray-900/60 transition-all duration-300">
+<i class="ri-heart-line text-xl text-white"></i>
+</button>
+<button class="w-12 h-12 bg-gray-900/40 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-gray-900/60 transition-all duration-300">
+<i class="ri-chat-1-line text-xl text-white"></i>
+</button>
+<button class="w-12 h-12 bg-gray-900/40 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-gray-900/60 transition-all duration-300">
+<i class="ri-share-line text-xl text-white"></i>
+</button>
+</div>
+</div>
+</div>
+<div class="relative flex justify-center items-center">
+<div class="relative w-[280px] h-[560px] bg-black rounded-[3rem] border-[14px] border-black overflow-hidden shadow-xl">
+<div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[120px] h-[24px] bg-black rounded-b-[1rem] flex items-center justify-center">
+<div class="w-[60px] h-[6px] bg-gray-800 rounded-full"></div>
+</div>
+<video class="w-full h-full object-cover" autoplay loop muted playsinline>
+<source src="https://assets.mixkit.co/videos/preview/mixkit-tech-review-setup-4075-large.mp4" type="video/mp4">
+</video>
+<div class="absolute bottom-4 right-4 flex flex-col space-y-4">
+<button class="w-12 h-12 bg-gray-900/40 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-gray-900/60 transition-all duration-300">
+<i class="ri-heart-line text-xl text-white"></i>
+</button>
+<button class="w-12 h-12 bg-gray-900/40 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-gray-900/60 transition-all duration-300">
+<i class="ri-chat-1-line text-xl text-white"></i>
+</button>
+<button class="w-12 h-12 bg-gray-900/40 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-gray-900/60 transition-all duration-300">
+<i class="ri-share-line text-xl text-white"></i>
+</button>
+</div>
+</div>
+</div>
+<div class="relative flex justify-center items-center">
+<div class="relative w-[280px] h-[560px] bg-black rounded-[3rem] border-[14px] border-black overflow-hidden shadow-xl">
+<div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[120px] h-[24px] bg-black rounded-b-[1rem] flex items-center justify-center">
+<div class="w-[60px] h-[6px] bg-gray-800 rounded-full"></div>
+</div>
+<video class="w-full h-full object-cover" autoplay loop muted playsinline>
+<source src="https://assets.mixkit.co/videos/preview/mixkit-gaming-setup-reveal-4076-large.mp4" type="video/mp4">
+</video>
+<div class="absolute bottom-4 right-4 flex flex-col space-y-4">
+<button class="w-12 h-12 bg-gray-900/40 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-gray-900/60 transition-all duration-300">
+<i class="ri-heart-line text-xl text-white"></i>
+</button>
+<button class="w-12 h-12 bg-gray-900/40 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-gray-900/60 transition-all duration-300">
+<i class="ri-chat-1-line text-xl text-white"></i>
+</button>
+<button class="w-12 h-12 bg-gray-900/40 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-gray-900/60 transition-all duration-300">
+<i class="ri-share-line text-xl text-white"></i>
+</button>
+</div>
+</div>
+</div>
+<div class="relative flex justify-center items-center">
+<div class="relative w-[280px] h-[560px] bg-black rounded-[3rem] border-[14px] border-black overflow-hidden shadow-xl">
+<div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[120px] h-[24px] bg-black rounded-b-[1rem] flex items-center justify-center">
+<div class="w-[60px] h-[6px] bg-gray-800 rounded-full"></div>
+</div>
+<video class="w-full h-full object-cover" autoplay loop muted playsinline>
+<source src="https://assets.mixkit.co/videos/preview/mixkit-workspace-tour-4077-large.mp4" type="video/mp4">
+</video>
+<div class="absolute bottom-4 right-4 flex flex-col space-y-4">
+<button class="w-12 h-12 bg-gray-900/40 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-gray-900/60 transition-all duration-300">
+<i class="ri-heart-line text-xl text-white"></i>
+</button>
+<button class="w-12 h-12 bg-gray-900/40 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-gray-900/60 transition-all duration-300">
+<i class="ri-chat-1-line text-xl text-white"></i>
+</button>
+<button class="w-12 h-12 bg-gray-900/40 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-gray-900/60 transition-all duration-300">
+<i class="ri-share-line text-xl text-white"></i>
+</button>
+</div>
+</div>
+</div>
+<div class="relative flex justify-center items-center">
+<div class="relative w-[280px] h-[560px] bg-black rounded-[3rem] border-[14px] border-black overflow-hidden shadow-xl">
+<div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[120px] h-[24px] bg-black rounded-b-[1rem] flex items-center justify-center">
+<div class="w-[60px] h-[6px] bg-gray-800 rounded-full"></div>
+</div>
+<video class="w-full h-full object-cover" autoplay loop muted playsinline>
+<source src="https://assets.mixkit.co/videos/preview/mixkit-desk-accessories-showcase-4078-large.mp4" type="video/mp4">
+</video>
+<div class="absolute bottom-4 right-4 flex flex-col space-y-4">
+<button class="w-12 h-12 bg-gray-900/40 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-gray-900/60 transition-all duration-300">
+<i class="ri-heart-line text-xl text-white"></i>
+</button>
+<button class="w-12 h-12 bg-gray-900/40 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-gray-900/60 transition-all duration-300">
+<i class="ri-chat-1-line text-xl text-white"></i>
+</button>
+<button class="w-12 h-12 bg-gray-900/40 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-gray-900/60 transition-all duration-300">
+<i class="ri-share-line text-xl text-white"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute top-4 right-4 flex space-x-2">
+<button class="video-prev !rounded-full bg-gray-900/40 p-2 hover:bg-gray-900/60 transition-all duration-300 backdrop-blur-sm">
+<i class="ri-skip-back-line w-6 h-6 flex items-center justify-center text-white"></i>
+</button>
+<button class="video-play !rounded-full bg-gray-900/40 p-2 hover:bg-gray-900/60 transition-all duration-300 backdrop-blur-sm">
+<i class="ri-play-line w-6 h-6 flex items-center justify-center text-white"></i>
+</button>
+<button class="video-next !rounded-full bg-gray-900/40 p-2 hover:bg-gray-900/60 transition-all duration-300 backdrop-blur-sm">
+<i class="ri-skip-forward-line w-6 h-6 flex items-center justify-center text-white"></i>
+</button>
+</div>
+</div>
+<div class="p-8">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-2xl font-bold text-gray-900">Viral Tech Reviews - Instagram Reels</h2>
+<span class="px-3 py-1 text-sm text-primary bg-primary/10 rounded-full">Instagram Reels</span>
+</div>
+<div class="flex items-center space-x-4 mb-6">
+<div class="flex items-center">
+<i class="ri-calendar-line w-4 h-4 flex items-center justify-center text-gray-400 mr-2"></i>
+<span class="text-gray-600">December 2024</span>
+</div>
+<div class="flex items-center">
+<i class="ri-instagram-line w-4 h-4 flex items-center justify-center text-gray-400 mr-2"></i>
+<span class="text-gray-600">50+ reels</span>
+</div>
+<div class="flex items-center">
+<i class="ri-fire-line w-4 h-4 flex items-center justify-center text-gray-400 mr-2"></i>
+<span class="text-gray-600">1M+ total views</span>
+</div>
+</div>
+<p class="text-gray-600 mb-6">Created engaging and viral-worthy Instagram Reels for tech influencers. Specialized in quick, impactful tech reviews and tutorials optimized for vertical viewing. Each reel features dynamic transitions and eye-catching effects.</p>
+<div class="mb-8">
+<h3 class="text-lg font-semibold text-gray-900 mb-4">Editing Techniques</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center">
+<i class="ri-check-line w-5 h-5 flex items-center justify-center text-primary mr-2"></i>
+<span class="text-gray-600">Vertical Video Optimization</span>
+</div>
+<div class="flex items-center">
+<i class="ri-check-line w-5 h-5 flex items-center justify-center text-primary mr-2"></i>
+<span class="text-gray-600">Quick-cut Transitions</span>
+</div>
+<div class="flex items-center">
+<i class="ri-check-line w-5 h-5 flex items-center justify-center text-primary mr-2"></i>
+<span class="text-gray-600">Trending Effects</span>
+</div>
+<div class="flex items-center">
+<i class="ri-check-line w-5 h-5 flex items-center justify-center text-primary mr-2"></i>
+<span class="text-gray-600">Engaging Text Animations</span>
+</div>
+</div>
+</div>
+<div class="bg-gray-700 rounded-lg p-6 mb-8">
+<div class="flex items-start">
+<img src="https://public.readdy.ai/ai/img_res/91a7c258b29875703deff3132f2ab6ff.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+<div>
+<p class="text-gray-400 italic mb-4">"The FitTrack app has revolutionized how our users engage with their fitness journey. The UI is intuitive and the features are exactly what our community needed."</p>
+<div>
+<h4 class="font-semibold text-gray-900">Sarah Anderson</h4>
+<p class="text-gray-600">Product Manager, HealthTech Innovations</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex space-x-4">
+<button class="!rounded-button bg-primary text-white px-6 py-2 flex items-center">
+<i class="ri-eye-line w-4 h-4 flex items-center justify-center mr-2"></i>
+View Live
+</button>
+<button class="!rounded-button bg-gray-700 border border-gray-600 text-gray-300 px-6 py-2 flex items-center">
+<i class="ri-share-line w-4 h-4 flex items-center justify-center mr-2"></i>
+Share
+</button>
+</div>
+<div class="flex items-center space-x-2">
+<button class="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-primary">
+<i class="ri-github-line w-5 h-5 flex items-center justify-center"></i>
+</button>
+<button class="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-primary">
+<i class="ri-dribbble-line w-5 h-5 flex items-center justify-center"></i>
+</button>
+<button class="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-primary">
+<i class="ri-behance-line w-5 h-5 flex items-center justify-center"></i>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const likeButtons = document.querySelectorAll(".ri-heart-line");
+  likeButtons.forEach((button) => {
+    let isLiked = false;
+    button.addEventListener("click", function () {
+      isLiked = !isLiked;
+      if (isLiked) {
+        this.classList.remove("ri-heart-line");
+        this.classList.add("ri-heart-fill", "text-red-500");
+      } else {
+        this.classList.remove("ri-heart-fill", "text-red-500");
+        this.classList.add("ri-heart-line");
+      }
+    });
+  });
+  const shareButtons = document.querySelectorAll(".ri-share-line");
+  shareButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const shareDialog = document.createElement("div");
+      shareDialog.className =
+        "fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50";
+      shareDialog.innerHTML = `
+<div class="bg-gray-800 p-6 rounded-lg shadow-xl">
+<h3 class="text-xl font-bold text-white mb-4">Share this content</h3>
+<div class="flex space-x-4">
+<button class="p-3 bg-blue-500 rounded-full hover:bg-blue-600 transition-colors">
+<i class="ri-facebook-fill text-white"></i>
+</button>
+<button class="p-3 bg-sky-500 rounded-full hover:bg-sky-600 transition-colors">
+<i class="ri-twitter-fill text-white"></i>
+</button>
+<button class="p-3 bg-pink-500 rounded-full hover:bg-pink-600 transition-colors">
+<i class="ri-instagram-fill text-white"></i>
+</button>
+</div>
+<button class="mt-4 text-gray-400 hover:text-white" onclick="this.parentElement.parentElement.remove()">Close</button>
+</div>
+`;
+      document.body.appendChild(shareDialog);
+    });
+  });
+  const chatButtons = document.querySelectorAll(".ri-chat-1-line");
+  chatButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const commentDialog = document.createElement("div");
+      commentDialog.className =
+        "fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50";
+      commentDialog.innerHTML = `
+<div class="bg-gray-800 p-6 rounded-lg shadow-xl w-96">
+<h3 class="text-xl font-bold text-white mb-4">Add a comment</h3>
+<textarea class="w-full h-32 bg-gray-700 text-white rounded p-3 mb-4" placeholder="Write your comment..."></textarea>
+<div class="flex justify-end space-x-3">
+<button class="px-4 py-2 bg-gray-700 text-white rounded hover:bg-gray-600" onclick="this.parentElement.parentElement.parentElement.remove()">Cancel</button>
+<button class="px-4 py-2 bg-primary text-white rounded hover:opacity-80">Post</button>
+</div>
+</div>
+`;
+      document.body.appendChild(commentDialog);
+    });
+  });
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const projectCards = document.querySelectorAll(".project-card");
+  const sortBtn = document.querySelector(".sort-btn");
+  let sortDirection = "desc";
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const category = this.dataset.category;
+      filterBtns.forEach((b) => b.classList.remove("bg-primary", "text-white"));
+      filterBtns.forEach((b) =>
+        b.classList.add("bg-gray-800", "text-gray-300"),
+      );
+      this.classList.remove("bg-white", "text-gray-700");
+      this.classList.add("bg-primary", "text-white");
+      projectCards.forEach((card) => {
+        if (category === "all" || card.dataset.category === category) {
+          card.classList.add("active");
+        } else {
+          card.classList.remove("active");
+        }
+      });
+    });
+  });
+  sortBtn.addEventListener("click", function () {
+    const cards = Array.from(projectCards);
+    sortDirection = sortDirection === "desc" ? "asc" : "desc";
+    cards.sort((a, b) => {
+      const dateA = new Date(a.dataset.date);
+      const dateB = new Date(b.dataset.date);
+      return sortDirection === "desc" ? dateB - dateA : dateA - dateB;
+    });
+    const container = document.getElementById("projectContainer");
+    cards.forEach((card) => container.appendChild(card));
+  });
+  const videos = [
+    // YouTube Videos
+    "https://media-hosting.imagekit.io//3e013932d41a46e2/6.mp4?Expires=1835013467&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=BEraZQxXC9Y9SEeCGqTBQpzgYE~OtxakFAUJYuJ13jedPmVjw-cex1WB6YhJ8ogApM6Gf9B5C1bOkYGazF0I~jiuk6RNyWSZQZNGgyPd~Ra2Cvvx7xpsSYoq06hSAguG3Cs~lS~GiRgIauQOP-cqHuCVQey2DugVrfY1IBSmmP4C548JPIfpaDKtB4h5hbK~PCl9vOZuPqUsZWzzKfGTnyuS2P8tqNFaMqZAVW6pTIDjDNQyVDrR0cOVjU6ng-UOB8r9Ycq0pgD2HikZCbO4fseJc3eqD4JQHES6v4z1BasXjktPrB3lritkW1twxu6p2rGAiKjx2RSv4ppW5wtC-w__",
+    "https://assets.mixkit.co/videos/preview/mixkit-hands-holding-a-smart-watch-4071-large.mp4",
+    "https://assets.mixkit.co/videos/preview/mixkit-typing-on-laptop-keyboard-4068-large.mp4",
+    "https://assets.mixkit.co/videos/preview/mixkit-man-working-on-laptop-in-office-4070-large.mp4",
+    "https://assets.mixkit.co/videos/preview/mixkit-woman-using-smartphone-4072-large.mp4",
+    // Instagram Reels
+    "https://assets.mixkit.co/videos/preview/mixkit-woman-recording-vlog-at-home-4073-large.mp4",
+    "https://assets.mixkit.co/videos/preview/mixkit-influencer-making-content-4074-large.mp4",
+    "https://assets.mixkit.co/videos/preview/mixkit-tech-review-setup-4075-large.mp4",
+    "https://assets.mixkit.co/videos/preview/mixkit-gaming-setup-reveal-4076-large.mp4",
+    "https://assets.mixkit.co/videos/preview/mixkit-workspace-tour-4077-large.mp4",
+    "https://assets.mixkit.co/videos/preview/mixkit-desk-accessories-showcase-4078-large.mp4",
+  ];
+  let currentVideoIndex = 0;
+  document.querySelectorAll(".video-prev").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const card = this.closest(".project-card");
+      const video = card.querySelector("video");
+      currentVideoIndex =
+        (currentVideoIndex - 1 + videos.length) % videos.length;
+      video.src = videos[currentVideoIndex];
+      video.play();
+    });
+  });
+  document.querySelectorAll(".video-next").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const card = this.closest(".project-card");
+      const video = card.querySelector("video");
+      currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+      video.src = videos[currentVideoIndex];
+      video.play();
+    });
+  });
+  document.querySelectorAll(".video-play").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const card = this.closest(".project-card");
+      const video = card.querySelector("video");
+      const icon = this.querySelector("i");
+      if (video.paused) {
+        video.play();
+        icon.classList.remove("ri-play-line");
+        icon.classList.add("ri-pause-line");
+      } else {
+        video.pause();
+        icon.classList.remove("ri-pause-line");
+        icon.classList.add("ri-play-line");
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
