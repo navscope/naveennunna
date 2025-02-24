@@ -56,7 +56,7 @@ const App: React.FC = () => {
                   </a>
                 ))}
                 <a
-                  href="work.html"
+                  href="https://navscopestudio.netlify.app/#"
                   className="bg-white/10 text-white px-6 py-2 rounded-full hover:bg-white/20 transition-colors backdrop-blur-sm border border-white/20"
                 >
                   Get Started
@@ -86,7 +86,7 @@ const App: React.FC = () => {
                   </a>
                 ))}
                 <a
-                  href="work.html"
+                  href="https://navscopestudio.netlify.app/#"
                   className="block w-full text-left px-3 py-2 bg-white/10 text-white rounded-md hover:bg-white/20 backdrop-blur-sm border border-white/20"
                 >
                   Get Started
@@ -109,14 +109,14 @@ const App: React.FC = () => {
                 </p>
                 <div className="mt-10 flex items-center space-x-4">
                   <a
-                    href="work.html"
+                    href="https://navscopestudio.netlify.app/#"
                     className="bg-white/10 text-white px-8 py-3 rounded-full hover:bg-white/20 transition-colors backdrop-blur-sm border border-white/20 flex items-center group"
                   >
                     Get Started
                     <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
                   </a>
                   <a
-                    href="portfolio.html"
+                    href="https://navscopestudio.netlify.app/portfolio"
                     className="bg-transparent text-white px-8 py-3 rounded-full border-2 border-white/20 hover:bg-white/10 transition-colors backdrop-blur-sm"
                   >
                     Know More
